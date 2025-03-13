@@ -52,7 +52,7 @@ def video():
 
         # Stream the output to the client
         while True:
-            chunk = process.stdout.read(1024 * 48)  # Read in 48 KB chunks
+            chunk = process.stdout.read(1024 * 128)  # Read in 128 KB chunks
             if not chunk:
                 break
             yield chunk
